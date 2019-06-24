@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 
+import {MatDividerModule} from '@angular/material/divider';
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -25,6 +27,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
     MatButtonModule,
      MatCheckboxModule,
      AppRoutingModule,
+     MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
