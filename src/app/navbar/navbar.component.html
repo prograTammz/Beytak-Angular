@@ -1,7 +1,7 @@
 <nav id="nav-bar" role="navigation">
-  <a class="nav-bar__item nav-bar__item--grey"  tabindex="0" role="button" onclick="toggleDrawer(event)"><i class="material-icons">menu</i></a>
-  <a class="nav-bar__item nav-bar__item--grey"  tabindex="0" role="button" onclick="previousPage()"><i class="material-icons">keyboard_backspace</i></a>
-  <a class="nav-bar__title">Beytak</a>
+  <a class="nav-bar__item nav-bar__item--grey"  tabindex="0" role="button" *ngIf="this.router.url == '/dashboard'" onclick="toggleDrawer(event)"><i class="material-icons">menu</i></a>
+  <a class="nav-bar__item nav-bar__item--grey"  tabindex="0" role="button" *ngIf="this.router.url != '/dashboard'" (click)="goBack()" routerlink=".."><i class="material-icons">keyboard_backspace</i></a>
+  <a class="nav-bar__title">{{title}}</a>
   <a class="navFav nav-bar__item--grey " href="#favs" role="button"><i class="material-icons">favorite</i></a>
   <a class="navSearch nav-bar__item--grey " role="button" routerLink="/search"><i class="material-icons">search</i></a>
   <a class="nav-bar__item--grey deskItems" role="link" routerLink="/register">SIGN UP</a>
