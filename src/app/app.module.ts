@@ -7,11 +7,13 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AdvicesPageComponent } from './advices-page/advices-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    AdvicesPageComponent
   ],
   imports: [
     BrowserModule,
