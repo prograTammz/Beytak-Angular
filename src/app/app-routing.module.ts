@@ -6,9 +6,10 @@ import {AdvicesPageComponent} from './pages/advices-page/advices-page.component'
 import {AboutusPageComponent} from './pages/aboutus-page/aboutus-page.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/dashboard', component: DashboardComponent ,pathMatch: 'full'},
-  {path: 'advices', component: AdvicesPageComponent},
-  {path: 'aboutus', component:AboutusPageComponent}
+  {path: '', redirectTo: '/dashboard' ,pathMatch: 'full'},
+  {path: 'dashboard',component: DashboardComponent, data :{routeName: "Beytak"}},
+  {path: 'advices', component: AdvicesPageComponent, data:{routeName: "Advices"}},
+  {path: 'aboutus', component:AboutusPageComponent, data:{routeName:"AboutUs"}}
 ]
 @NgModule({
   declarations: [],
