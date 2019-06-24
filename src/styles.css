@@ -10,3 +10,25 @@ a{
     text-decoration: none;
     color: #575757;
 }
+.cover-img{
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 100%;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.20);
+}
+@media only screen and (min-width: 501px) and (max-width: 900px) {
+    /* Tablet breakpoints */
+    
+    .cover-img{
+        height: 300px;
+    }
+}
+@media only screen and (min-width: 901px) {
+    .cover-img{
+        height: 400px;
+    }
+}
+.container{
+    margin: 0px 5vw ;
+}
