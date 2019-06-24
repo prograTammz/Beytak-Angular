@@ -1,0 +1,9 @@
+.page-content{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-top: 55px;
+    margin-bottom: 56px;
+    transition: all 1s ease;
+}
