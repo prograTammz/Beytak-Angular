@@ -41,4 +41,7 @@ export class NavbarComponent implements OnInit {
   goBack():void{
     this.location.back();
   }
+  toggleDrawer(){
+    
+  }
 }
