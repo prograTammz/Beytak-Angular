@@ -61,9 +61,54 @@
 mat-sidenav{
     position: fixed;
     margin-top: 55px;
+    width: 250px;
+    z-index: 3;
+    margin-bottom: 56px;
 }
 @media only screen and (max-width: 500px){
     .deskop-Items{
         display: none;
     }
+}
+#bottomNavBar {
+    width: 100vw;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.16);
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.bottomNavElm {
+    color: #575757;
+    margin: 0px 15px;
+}
+.bottomNavElmCenter {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.active {
+    color: #436885;
+
+}
+
+.centerElm {
+    background-color: #436885;
+    text-decoration: none;
+    height: 56px;
+    width: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.centerElm i {
+    color: white;
+
 }
