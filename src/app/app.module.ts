@@ -13,7 +13,7 @@ import {MatListModule} from '@angular/material/list'
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatBadgeModule} from '@angular/material/badge';
-
+import {MatCardModule} from '@angular/material/card';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -54,7 +54,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
      MatIconModule,
      MatToolbarModule,
      HttpClientModule,
-     MatBadgeModule
+     MatBadgeModule,
+     MatCardModule
   ],
   providers: [{ 
     provide: HAMMER_GESTURE_CONFIG, 
