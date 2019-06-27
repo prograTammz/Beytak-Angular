@@ -21,6 +21,15 @@ import { AdvicesPageComponent } from './pages/advices-page/advices-page.componen
 import { AboutusPageComponent } from './pages/aboutus-page/aboutus-page.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
+
+import {HammerGestureConfig, HAMMER_GESTURE_CONFIG} from '@angular/platform-browser';
+
+export class MyHammerConfig extends HammerGestureConfig  {
+  overrides = <any>{
+    'swipe': {velocity: 0.4, threshold: 20} // override default settings
+  }
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +54,13 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
      MatToolbarModule,
      HttpClientModule
   ],
-  providers: [],
+  providers: [{ 
+    provide: HAMMER_GESTURE_CONFIG, 
+    useClass: MyHammerConfig 
+  }],
   bootstrap: [AppComponent]
 })
+
+
+
 export class AppModule { }
