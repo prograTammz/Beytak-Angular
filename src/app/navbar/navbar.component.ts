@@ -16,8 +16,8 @@ export class NavbarComponent implements OnInit {
 
   @ViewChild(MatSidenav, {static: false}) private sideNav: MatSidenav;
   private navigationEnd: Observable<RouterEvent>;
-  private title: string;
-  constructor(private sanitizer: DomSanitizer,private matIconRegistry: MatIconRegistry,private router: Router,private location: Location, private activatedRoute: ActivatedRoute) { 
+  public title: string;
+  constructor(private sanitizer: DomSanitizer,private matIconRegistry: MatIconRegistry,public router: Router,private location: Location, private activatedRoute: ActivatedRoute) { 
 
     this.matIconRegistry.addSvgIcon('menu', sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/menu.svg'));
     this.matIconRegistry.addSvgIcon('close', sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/close.svg'));
