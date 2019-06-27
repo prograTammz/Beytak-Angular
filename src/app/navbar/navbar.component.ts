@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {Location} from '@angular/common';
 import { NavigationEnd,Router,ActivatedRoute } from '@angular/router';
 import {filter,map}from 'rxjs/operators';
 import { MatIconRegistry } from '@angular/material/icon';
 import {DomSanitizer} from '@angular/platform-browser';
+import {MatSidenav} from '@angular/material/sidenav'
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
+  @ViewChild(MatSidenav, {static: false}) sideNav: MatSidenav;
+
 
   fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
   fillerContent = Array.from({length: 50}, () =>
@@ -24,6 +28,7 @@ export class NavbarComponent implements OnInit {
     this.matIconRegistry.addSvgIcon('close', sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/close.svg'));
     this.matIconRegistry.addSvgIcon('search', sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/search.svg'));
     this.matIconRegistry.addSvgIcon('fav', sanitizer.bypassSecurityTrustResourceUrl('../../assets/icons/fav.svg'));
+    
   }
 
   ngOnInit() {
@@ -31,20 +36,14 @@ export class NavbarComponent implements OnInit {
       filter(event => event instanceof NavigationEnd),
       map(()=>{
         let child = this.activatedRoute.firstChild;
-          while (child) {
-            if (child.firstChild) {
-              child = child.firstChild;
-            } else if (child.snapshot.data && child.snapshot.data['routeName']) {
-              return child.snapshot.data['routeName'];
-            } else {
-              return null;
-            }
-          }
-          return null;
+        return child.snapshot.data['routeName'];
       })
     ).subscribe((data:any)=>{
       this.title = data;
+      this.sideNav.close();
     })
+  }
+  ngAfterViewInit(){
   }
   openLoginModal(): void{
     console.log("Testing LoginModal");
