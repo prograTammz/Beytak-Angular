@@ -54,3 +54,10 @@
 #top-nav-back{
     display: none;
 }
+.sidenav-container{
+    margin-top: 56px;
+}
+mat-sidenav{
+    position: fixed;
+    margin-top: 56px;
+}
