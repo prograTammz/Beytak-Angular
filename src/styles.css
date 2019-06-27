@@ -11,6 +11,19 @@ a{
     text-decoration: none;
     color: #575757;
 }
+
+.page-content{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+    margin-top: 55px;
+    margin-bottom: 56px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    transition: all 1s ease;
+}
+
 .cover-img{
     background-size: cover;
     background-position: center;
@@ -24,10 +37,16 @@ a{
     .cover-img{
         height: 300px;
     }
+    
 }
 @media only screen and (min-width: 901px) {
     .cover-img{
         height: 400px;
+    }
+    .page-content{
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 .container{
