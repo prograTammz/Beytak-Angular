@@ -1,6 +1,6 @@
 <nav id="nav-bar" role="navigation">
   <a class="nav-bar__item nav-bar__item--grey"  tabindex="0" role="button" *ngIf="this.router.url == '/dashboard'" (click)="snav.toggle()"><mat-icon [svgIcon]="snav.opened ? 'close' : 'menu'"></mat-icon></a>
-  <a class="nav-bar__item nav-bar__item--grey"  tabindex="0" role="button" *ngIf="this.router.url != '/dashboard'" (click)="goBack()" routerlink=".."><i class="material-icons">keyboard_backspace</i></a>
+  <a class="nav-bar__item nav-bar__item--grey"  tabindex="0" role="button" *ngIf="this.router.url != '/dashboard'" (click)="goBack()"><i class="material-icons">keyboard_backspace</i></a>
   <a class="nav-bar__title">{{title}}</a>
   <a class="navFav nav-bar__item--grey " href="#favs" role="button"><mat-icon svgIcon="fav"></mat-icon></a>
   
@@ -8,7 +8,7 @@
   <a class="nav-bar__item--grey deskop-Items" role="link" routerLink="/register">SIGN UP</a>
   <a class="nav-bar__item--grey deskop-Items" role="link" (click)="openLoginModal()">LOGIN</a>
 </nav>
-<mat-sidenav-container class="sidenav-container">
+<mat-sidenav-container class="sidenav-container" (swiperight)="snav.open()" (swipeleft)="snav.close()">
     <mat-sidenav #snav mode="over">
       <mat-nav-list>
         <mat-divider></mat-divider>
