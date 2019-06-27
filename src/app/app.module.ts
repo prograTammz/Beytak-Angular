@@ -12,6 +12,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatListModule} from '@angular/material/list'
 import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatBadgeModule} from '@angular/material/badge';
 
 
 import { AppComponent } from './app.component';
@@ -52,7 +53,8 @@ export class MyHammerConfig extends HammerGestureConfig  {
      MatListModule,
      MatIconModule,
      MatToolbarModule,
-     HttpClientModule
+     HttpClientModule,
+     MatBadgeModule
   ],
   providers: [{ 
     provide: HAMMER_GESTURE_CONFIG, 
