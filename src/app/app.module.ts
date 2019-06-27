@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
@@ -41,7 +42,8 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
      ReactiveFormsModule,
      MatListModule,
      MatIconModule,
-     MatToolbarModule
+     MatToolbarModule,
+     HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
