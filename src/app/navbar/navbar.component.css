@@ -41,14 +41,14 @@
     margin-left: auto;
 }
 
-.deskItems {
+.deskop-Items {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     margin: 0 15px;
     cursor: pointer;
 }
-.deskItems:hover{
+.deskop-Items:hover{
     text-shadow: 0px 3px rgba(81, 127, 164, 0.10)
 }
 #top-nav-back{
@@ -61,4 +61,9 @@
 mat-sidenav{
     position: fixed;
     margin-top: 56px;
+}
+@media only screen and (max-width: 500px){
+    .deskop-Items{
+        display: none;
+    }
 }
